@@ -1,0 +1,22 @@
+<div class="face-snap-card" [ngClass]="{ snapped: hasLike }">
+  <p>{{ 265515.36 | number: "1.0-1" }}</p>
+  <p>{{ 0.36652 | percent: "1.0-1" }}</p>
+  <p>{{ 344.36 | currency: "EUR" }}</p>
+
+  <h2>{{ faceSnap.title | uppercase }}</h2>
+  <a routerLink="/facesnaps">Back</a>
+
+  <p>Mise en ligne le : {{ faceSnap.creatingDate | date: "medium" }}</p>
+
+  <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title" />
+
+  <p>{{ faceSnap.descritpion }}</p>
+
+  <p *ngIf="faceSnap.location">Photo prise à : {{ faceSnap.location }}</p>
+
+  <p [ngStyle]="{ color: 'rgb(0,' + faceSnap.snaps + ',0)' }">
+    🧙‍♂️ {{ faceSnap.snaps }}
+  </p>
+
+  <button (click)="onSnap()">{{ msg }}</button>
+</div>

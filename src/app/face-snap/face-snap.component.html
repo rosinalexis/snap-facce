@@ -1,0 +1,7 @@
+<div class="face-snap-card" [ngClass]="{ snapped: hasLike }">
+  <h2>{{ faceSnap.title | uppercase }}</h2>
+
+  <p>{{ faceSnap.descritpion }}</p>
+
+  <button (click)="onViewFaceSnap()">View</button>
+</div>
