@@ -1,4 +1,16 @@
 <div class="landing-block">
+  <form>
+    <label for="emailInput"
+      >Incrivez-vous pour recevoir notre news letter !</label
+    >
+    <input
+      type="email"
+      id="emailInput"
+      [(ngModel)]="userEmail"
+      name="userEmail"
+    />
+    <button type="submit">Ok!</button>
+  </form>
   <img src="https://picsum.photos/400" alt="Snapface logo" />
   <div class="landing-links">
     <button (click)="onContinue()">Continuer vers Snapface</button>
