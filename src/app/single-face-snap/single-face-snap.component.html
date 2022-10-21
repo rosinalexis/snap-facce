@@ -6,11 +6,11 @@
   <h2>{{ faceSnap.title | uppercase }}</h2>
   <a routerLink="/facesnaps">Back</a>
 
-  <p>Mise en ligne le : {{ faceSnap.creatingDate | date: "medium" }}</p>
+  <p>Mise en ligne le : {{ faceSnap.createdDate | date: "medium" }}</p>
 
   <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title" />
 
-  <p>{{ faceSnap.descritpion }}</p>
+  <p>{{ faceSnap.description }}</p>
 
   <p *ngIf="faceSnap.location">Photo prise à : {{ faceSnap.location }}</p>
 
