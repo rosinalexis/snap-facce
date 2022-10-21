@@ -1,4 +1,8 @@
-<div class="face-snap-card" [ngClass]="{ snapped: hasLike }">
+<div
+  class="face-snap-card"
+  *ngIf="faceSnap$ | async as faceSnap"
+  [ngClass]="{ snapped: hasLike }"
+>
   <p>{{ 265515.36 | number: "1.0-1" }}</p>
   <p>{{ 0.36652 | percent: "1.0-1" }}</p>
   <p>{{ 344.36 | currency: "EUR" }}</p>
@@ -18,5 +22,5 @@
     🧙‍♂️ {{ faceSnap.snaps }}
   </p>
 
-  <button (click)="onSnap()">{{ msg }}</button>
+  <button (click)="onSnap(faceSnap.id)">{{ msg }}</button>
 </div>
