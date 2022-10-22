@@ -1,3 +1,4 @@
+import { AuthModule } from './auth/auth.module';
 import { FaceSnapsModule } from './face-snaps/face-snaps.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -14,10 +15,9 @@ import { LandingPageModule } from './landing-page/landing-page.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-
     CoreModule,
-    FaceSnapsModule,
     LandingPageModule,
+    AuthModule,
   ],
   bootstrap: [AppComponent],
 })
